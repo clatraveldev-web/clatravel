@@ -76,7 +76,7 @@ export function Hero() {
                     </div>
 
                     {/* Stats */}
-                    <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12 pt-6 md:pt-12 pb-4 md:pb-0">
+                    <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12 pt-4 md:pt-8 pb-6 md:pb-4">
                         <div className="flex items-center gap-3 text-white">
                             <div className="p-3 bg-white/10 backdrop-blur-md rounded-lg">
                                 <MapPin className="h-6 w-6" />
