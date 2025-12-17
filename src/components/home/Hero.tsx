@@ -1,10 +1,14 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Calendar, Users } from "lucide-react";
 import Link from "next/link";
 
 export function Hero() {
+    const t = useTranslations("hero");
+    const tCommon = useTranslations("common");
+
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background Image */}
@@ -35,20 +39,19 @@ export function Hero() {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
                         </span>
-                        <span className="text-sm font-medium">Discover 8+ Amazing Destinations</span>
+                        <span className="text-sm font-medium">{t("badge")}</span>
                     </div>
 
                     {/* Heading */}
                     <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight">
-                        Explore the World with{" "}
-                        <span className="text-secondary">Extraordinary</span>{" "}
-                        Journeys
+                        {t("title")}{" "}
+                        <span className="text-secondary">{t("titleHighlight")}</span>{" "}
+                        {t("titleEnd")}
                     </h1>
 
                     {/* Subheading */}
                     <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-                        From the bustling streets of Singapore to the spiritual paths of Umrah,
-                        we craft unforgettable travel experiences tailored to your dreams.
+                        {t("description")}
                     </p>
 
                     {/* CTA Buttons */}
@@ -59,7 +62,7 @@ export function Hero() {
                             asChild
                         >
                             <Link href="#packages">
-                                Explore Packages
+                                {tCommon("explorePackages")}
                                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                             </Link>
                         </Button>
@@ -70,7 +73,7 @@ export function Hero() {
                             asChild
                         >
                             <Link href="#contact">
-                                Contact Us
+                                {tCommon("contactUs")}
                             </Link>
                         </Button>
                     </div>
@@ -83,7 +86,7 @@ export function Hero() {
                             </div>
                             <div className="text-left">
                                 <p className="text-2xl font-bold">8+</p>
-                                <p className="text-sm text-white/70">Destinations</p>
+                                <p className="text-sm text-white/70">{t("stats.destinations")}</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-3 text-white">
@@ -92,7 +95,7 @@ export function Hero() {
                             </div>
                             <div className="text-left">
                                 <p className="text-2xl font-bold">10K+</p>
-                                <p className="text-sm text-white/70">Happy Travelers</p>
+                                <p className="text-sm text-white/70">{t("stats.travelers")}</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-3 text-white">
@@ -101,7 +104,7 @@ export function Hero() {
                             </div>
                             <div className="text-left">
                                 <p className="text-2xl font-bold">15+</p>
-                                <p className="text-sm text-white/70">Years Experience</p>
+                                <p className="text-sm text-white/70">{t("stats.experience")}</p>
                             </div>
                         </div>
                     </div>

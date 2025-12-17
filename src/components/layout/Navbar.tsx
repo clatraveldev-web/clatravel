@@ -2,21 +2,25 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Plane } from "lucide-react";
 import { WHATSAPP_LINK } from "@/lib/utils";
 
-const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/#destinations", label: "Destinations" },
-    { href: "/#packages", label: "Packages" },
-    { href: "/#about", label: "About" },
-    { href: "/#contact", label: "Contact" },
-];
-
 export function Navbar() {
+    const t = useTranslations("nav");
+    const tCommon = useTranslations("common");
+
     const [isScrolled, setIsScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+
+    const navLinks = [
+        { href: "/", label: t("home") },
+        { href: "/#destinations", label: t("destinations") },
+        { href: "/#packages", label: t("packages") },
+        { href: "/#about", label: t("about") },
+        { href: "/#contact", label: t("contact") },
+    ];
 
     useEffect(() => {
         const handleScroll = () => {
@@ -82,7 +86,7 @@ export function Navbar() {
                                 asChild
                             >
                                 <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                                    Book Now
+                                    {tCommon("bookNow")}
                                 </Link>
                             </Button>
                         </div>
@@ -129,7 +133,7 @@ export function Navbar() {
                             rel="noopener noreferrer"
                             onClick={() => setIsOpen(false)}
                         >
-                            Book Now
+                            {tCommon("bookNow")}
                         </Link>
                     </Button>
 

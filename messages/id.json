@@ -1,0 +1,94 @@
+{
+    "common": {
+        "bookNow": "Pesan Sekarang",
+        "contactUs": "Hubungi Kami",
+        "viewAll": "Lihat Semua",
+        "learnMore": "Selengkapnya",
+        "subscribe": "Berlangganan",
+        "startingFrom": "Mulai dari",
+        "explorePackages": "Jelajahi Paket",
+        "viewAllDestinations": "Lihat Semua Destinasi"
+    },
+    "nav": {
+        "home": "Beranda",
+        "destinations": "Destinasi",
+        "packages": "Paket",
+        "about": "Tentang",
+        "contact": "Kontak"
+    },
+    "hero": {
+        "badge": "Pengalaman Perjalanan Premium",
+        "title": "Temukan Destinasi",
+        "titleHighlight": "Terindah",
+        "titleEnd": "di Dunia",
+        "description": "Dari jalanan ramai Singapura hingga perjalanan spiritual Umrah, kami merancang pengalaman perjalanan tak terlupakan sesuai impian Anda.",
+        "stats": {
+            "destinations": "Destinasi",
+            "travelers": "Traveler",
+            "experience": "Tahun Pengalaman"
+        }
+    },
+    "featured": {
+        "badge": "Destinasi Unggulan",
+        "title": "Destinasi",
+        "titleHighlight": "Unggulan",
+        "description": "Jelajahi destinasi paling populer kami, dipilih oleh ahli perjalanan untuk pengalaman tak terlupakan."
+    },
+    "packages": {
+        "badge": "Paket Perjalanan",
+        "title": "Jelajahi Semua",
+        "titleHighlight": "Paket",
+        "description": "Pilih dari paket perjalanan kami yang dikurasi dengan cermat untuk memberikan pengalaman terbaik dengan nilai yang luar biasa.",
+        "duration": "Durasi",
+        "groupSize": "Ukuran Grup",
+        "bookPackage": "Pesan Paket Ini",
+        "otherDestinations": "Jelajahi Destinasi Lainnya",
+        "otherDescription": "Temukan lebih banyak pengalaman perjalanan menakjubkan",
+        "highlights": "Highlights",
+        "included": "Termasuk",
+        "excluded": "Tidak Termasuk",
+        "itinerary": "Itinerary"
+    },
+    "testimonials": {
+        "badge": "Testimoni",
+        "title": "Apa Kata",
+        "titleHighlight": "Traveler",
+        "titleEnd": "Kami",
+        "description": "Cerita nyata dari traveler nyata. Temukan mengapa ribuan orang memilih ClaTravel untuk liburan impian mereka.",
+        "stats": {
+            "travelers": "Traveler Bahagia",
+            "years": "Tahun Pengalaman",
+            "rating": "Rating Rata-rata",
+            "support": "Dukungan Pelanggan"
+        }
+    },
+    "footer": {
+        "newsletterTitle": "Berlangganan Newsletter Kami",
+        "newsletterDescription": "Dapatkan penawaran perjalanan eksklusif dan update langsung ke inbox Anda",
+        "emailPlaceholder": "Masukkan email Anda",
+        "subscribe": "Berlangganan",
+        "company": "Perusahaan",
+        "aboutUs": "Tentang Kami",
+        "ourTeam": "Tim Kami",
+        "careers": "Karir",
+        "services": "Layanan",
+        "tourPackages": "Paket Tur",
+        "customTrips": "Perjalanan Custom",
+        "groupTours": "Tur Grup",
+        "support": "Dukungan",
+        "faq": "FAQ",
+        "privacyPolicy": "Kebijakan Privasi",
+        "termsConditions": "Syarat & Ketentuan",
+        "contactUs": "Hubungi Kami",
+        "copyright": "© 2024 ClaTravel. Semua hak dilindungi.",
+        "tagline": "Gerbang Anda menuju pengalaman perjalanan luar biasa. Kami merancang perjalanan berkesan ke berbagai destinasi di seluruh dunia."
+    },
+    "pricing": {
+        "standard": "Standar",
+        "premium": "Premium",
+        "luxury": "Luxury",
+        "economy": "Ekonomi",
+        "vip": "VIP",
+        "perPerson": "per orang"
+    }
+}

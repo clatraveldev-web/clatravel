@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
 import { packages } from "@/lib/data/packages";
 import { formatIDR } from "@/lib/utils";
@@ -9,21 +10,23 @@ import { formatIDR } from "@/lib/utils";
 const featuredDestinations = packages.slice(0, 6);
 
 export function FeaturedDestinations() {
+    const t = useTranslations("featured");
+    const tCommon = useTranslations("common");
+
     return (
         <section id="destinations" className="py-20 md:py-28 bg-background">
             <div className="container mx-auto px-4">
                 {/* Section Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <span className="inline-block text-sm font-semibold text-primary uppercase tracking-wider mb-4">
-                        Popular Destinations
+                        {t("badge")}
                     </span>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                        Discover Your Next{" "}
-                        <span className="text-primary">Adventure</span>
+                        {t("title")}{" "}
+                        <span className="text-primary">{t("titleHighlight")}</span>
                     </h2>
                     <p className="text-muted-foreground text-lg">
-                        Explore our handpicked destinations across Asia, Australia, Europe, and sacred pilgrimages.
-                        Each journey is crafted to create unforgettable memories.
+                        {t("description")}
                     </p>
                 </div>
 
@@ -63,7 +66,7 @@ export function FeaturedDestinations() {
                                         </p>
                                         <div className="flex items-center justify-between pt-2">
                                             <div>
-                                                <span className="text-white/60 text-sm">Starting from</span>
+                                                <span className="text-white/60 text-sm">{tCommon("startingFrom")}</span>
                                                 <p className="text-white font-bold text-lg">
                                                     {formatIDR(destination.startingPrice)}
                                                 </p>
@@ -85,7 +88,7 @@ export function FeaturedDestinations() {
                         href="#packages"
                         className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
                     >
-                        View All Destinations
+                        {tCommon("viewAllDestinations")}
                         <ArrowRight className="h-5 w-5" />
                     </Link>
                 </div>

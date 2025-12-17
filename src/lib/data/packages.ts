@@ -28,16 +28,17 @@ export interface TravelPackage {
 }
 
 export const packages: TravelPackage[] = [
+    // ============ SOUTHEAST ASIA - BUDGET FRIENDLY (~5 Mio) ============
     {
         id: "1",
         slug: "singapore",
         title: "Discover Singapore",
         country: "Singapore",
         tagline: "Where Tradition Meets Innovation",
-        description: "Experience the magic of Singapore, a dazzling city-state where futuristic architecture blends seamlessly with rich cultural heritage. From the iconic Marina Bay Sands to the lush Gardens by the Bay, discover why Singapore is Asia's most exciting destination.",
-        duration: "5 Days / 4 Nights",
-        groupSize: "2-15 People",
-        startingPrice: 1299,
+        description: "Experience the magic of Singapore, a dazzling city-state where futuristic architecture blends seamlessly with rich cultural heritage. A perfect quick getaway to Asia's most exciting destination.",
+        duration: "3 Days / 2 Nights",
+        groupSize: "2-20 People",
+        startingPrice: 312,
         currency: "USD",
         heroImages: [
             "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1920&q=80",
@@ -46,77 +47,60 @@ export const packages: TravelPackage[] = [
         ],
         highlights: [
             "Marina Bay Sands SkyPark",
-            "Gardens by the Bay & Cloud Forest",
-            "Sentosa Island Adventure",
-            "Chinatown & Little India Heritage Walk",
-            "Universal Studios Singapore",
-            "Night Safari Experience"
+            "Gardens by the Bay",
+            "Merlion Park",
+            "Chinatown & Little India"
         ],
         included: [
-            "4-star hotel accommodation",
+            "3-star hotel accommodation",
             "Daily breakfast",
             "Airport transfers",
-            "All entrance fees",
-            "Professional English-speaking guide",
-            "Air-conditioned transportation"
+            "City tour"
         ],
         excluded: [
             "International flights",
             "Travel insurance",
             "Personal expenses",
-            "Meals not mentioned",
-            "Visa fees (if applicable)"
+            "Meals not mentioned"
         ],
         itinerary: [
             {
                 day: 1,
-                title: "Arrival & Marina Bay",
-                description: "Welcome to Singapore! Upon arrival, transfer to your hotel and begin your adventure with an evening stroll around Marina Bay.",
-                activities: ["Airport pickup", "Hotel check-in", "Marina Bay Sands light show", "Welcome dinner at local restaurant"]
+                title: "Arrival & City Exploration",
+                description: "Welcome to Singapore! Transfer to your hotel and explore the city.",
+                activities: ["Airport pickup", "Hotel check-in", "Marina Bay Sands area", "Merlion Park", "Dinner at local hawker center"]
             },
             {
                 day: 2,
                 title: "Gardens & Culture",
-                description: "Explore the magnificent Gardens by the Bay and immerse yourself in Singapore's diverse cultural neighborhoods.",
-                activities: ["Gardens by the Bay", "Cloud Forest & Flower Dome", "Chinatown walking tour", "Little India exploration"]
+                description: "Explore Gardens by the Bay and cultural neighborhoods.",
+                activities: ["Gardens by the Bay", "Chinatown walking tour", "Little India exploration", "Orchard Road shopping"]
             },
             {
                 day: 3,
-                title: "Sentosa Island",
-                description: "A full day of fun and adventure on Sentosa Island, Singapore's premier resort destination.",
-                activities: ["Universal Studios Singapore", "S.E.A. Aquarium", "Beach relaxation", "Wings of Time show"]
-            },
-            {
-                day: 4,
-                title: "Wildlife & Shopping",
-                description: "Experience Singapore's world-renowned wildlife parks and enjoy shopping on Orchard Road.",
-                activities: ["Singapore Zoo", "Orchard Road shopping", "Night Safari adventure"]
-            },
-            {
-                day: 5,
                 title: "Departure",
-                description: "Free time for last-minute shopping or exploration before your airport transfer.",
+                description: "Free morning before your airport transfer.",
                 activities: ["Free morning", "Souvenir shopping", "Airport transfer"]
             }
         ],
         pricingOptions: [
             {
                 name: "Standard",
-                price: 1299,
-                description: "Perfect for budget-conscious travelers",
-                features: ["3-star hotel", "Shared transfers", "Small group tours", "Basic travel insurance"]
+                price: 312,
+                description: "Budget-friendly Singapore trip",
+                features: ["3-star hotel", "Shared transfers", "Group tours", "Breakfast included"]
             },
             {
                 name: "Premium",
-                price: 1799,
-                description: "Enhanced comfort and experiences",
-                features: ["4-star hotel", "Private transfers", "Small group tours", "Comprehensive insurance", "Welcome dinner"]
+                price: 450,
+                description: "Comfortable Singapore experience",
+                features: ["4-star hotel", "Private transfers", "Small group tours", "Welcome dinner"]
             },
             {
                 name: "Luxury",
-                price: 2499,
-                description: "Ultimate Singapore experience",
-                features: ["5-star hotel", "Private transfers", "Private guided tours", "Premium insurance", "All meals included", "Spa treatment"]
+                price: 625,
+                description: "Premium Singapore getaway",
+                features: ["5-star hotel", "Private transfers", "Private tours", "All meals included"]
             }
         ]
     },
@@ -126,10 +110,10 @@ export const packages: TravelPackage[] = [
         title: "Amazing Thailand",
         country: "Thailand",
         tagline: "Land of Smiles",
-        description: "Discover the enchanting beauty of Thailand, from the golden temples of Bangkok to the pristine beaches of Phuket. Experience world-class cuisine, ancient traditions, and the warmest hospitality in Southeast Asia.",
-        duration: "7 Days / 6 Nights",
-        groupSize: "2-20 People",
-        startingPrice: 999,
+        description: "Discover the enchanting beauty of Thailand, from the golden temples of Bangkok to the vibrant street markets. Experience world-class cuisine and the warmest hospitality in Southeast Asia.",
+        duration: "4 Days / 3 Nights",
+        groupSize: "2-25 People",
+        startingPrice: 312,
         currency: "USD",
         heroImages: [
             "https://images.unsplash.com/photo-1528181304800-259b08848526?w=1920&q=80",
@@ -138,19 +122,15 @@ export const packages: TravelPackage[] = [
         ],
         highlights: [
             "Grand Palace & Wat Pho",
-            "Floating Markets Experience",
-            "Phi Phi Islands Day Trip",
-            "Thai Cooking Class",
-            "Elephant Sanctuary Visit",
-            "Beach Paradise in Phuket"
+            "Floating Markets",
+            "Thai Street Food",
+            "Temple Tours"
         ],
         included: [
             "Hotel accommodation",
             "Daily breakfast",
-            "Domestic flights (Bangkok-Phuket)",
-            "All entrance fees",
-            "Professional guide",
-            "Island hopping tour"
+            "All transfers",
+            "Temple tour"
         ],
         excluded: [
             "International flights",
@@ -162,41 +142,23 @@ export const packages: TravelPackage[] = [
             {
                 day: 1,
                 title: "Arrival in Bangkok",
-                description: "Arrive in the vibrant capital of Thailand and transfer to your hotel.",
+                description: "Arrive in the vibrant capital of Thailand.",
                 activities: ["Airport pickup", "Hotel check-in", "Welcome dinner with Thai cuisine"]
             },
             {
                 day: 2,
                 title: "Bangkok Temples",
-                description: "Explore Bangkok's most iconic temples and cultural landmarks.",
-                activities: ["Grand Palace visit", "Wat Pho (Reclining Buddha)", "Wat Arun sunset", "Khao San Road evening"]
+                description: "Explore Bangkok's most iconic temples.",
+                activities: ["Grand Palace visit", "Wat Pho (Reclining Buddha)", "Wat Arun sunset"]
             },
             {
                 day: 3,
-                title: "Floating Markets",
-                description: "Experience the famous floating markets and local Thai life.",
-                activities: ["Damnoen Saduak Floating Market", "Thai cooking class", "Evening Chao Phraya dinner cruise"]
+                title: "Markets & Culture",
+                description: "Experience local Thai life and markets.",
+                activities: ["Chatuchak or local market", "Thai massage experience", "Khao San Road evening"]
             },
             {
                 day: 4,
-                title: "Fly to Phuket",
-                description: "Fly to Phuket and enjoy the beautiful beaches.",
-                activities: ["Flight to Phuket", "Beach resort check-in", "Free afternoon", "Patong Beach evening"]
-            },
-            {
-                day: 5,
-                title: "Phi Phi Islands",
-                description: "Full day island hopping adventure to the stunning Phi Phi Islands.",
-                activities: ["Speedboat to Phi Phi", "Maya Bay visit", "Snorkeling", "Beach lunch", "Sunset views"]
-            },
-            {
-                day: 6,
-                title: "Phuket Exploration",
-                description: "Discover the beauty and culture of Phuket island.",
-                activities: ["Big Buddha visit", "Old Phuket Town", "Elephant sanctuary", "Farewell dinner"]
-            },
-            {
-                day: 7,
                 title: "Departure",
                 description: "Free time before your departure flight.",
                 activities: ["Free morning", "Airport transfer"]
@@ -205,21 +167,21 @@ export const packages: TravelPackage[] = [
         pricingOptions: [
             {
                 name: "Standard",
-                price: 999,
-                description: "Great value Thailand experience",
-                features: ["3-star hotels", "Shared transfers", "Group tours", "Basic insurance"]
+                price: 312,
+                description: "Great value Thailand trip",
+                features: ["3-star hotels", "Shared transfers", "Group tours", "Breakfast included"]
             },
             {
                 name: "Premium",
-                price: 1499,
-                description: "Comfortable and memorable",
-                features: ["4-star hotels", "Private transfers", "Semi-private tours", "Full insurance", "Extra activities"]
+                price: 437,
+                description: "Comfortable Thai adventure",
+                features: ["4-star hotels", "Private transfers", "Semi-private tours", "Welcome dinner"]
             },
             {
                 name: "Luxury",
-                price: 2199,
-                description: "Ultimate Thai luxury",
-                features: ["5-star resorts", "Private transfers", "Private tours", "Premium insurance", "Spa treatments", "Fine dining"]
+                price: 562,
+                description: "Premium Thai experience",
+                features: ["5-star hotels", "Private transfers", "Private tours", "Spa treatment", "Fine dining"]
             }
         ]
     },
@@ -229,10 +191,10 @@ export const packages: TravelPackage[] = [
         title: "Magical Malaysia",
         country: "Malaysia",
         tagline: "Truly Asia",
-        description: "Experience the diverse wonders of Malaysia, from the iconic Petronas Twin Towers to the pristine beaches of Langkawi. Discover a perfect blend of modern cities, ancient rainforests, and rich multicultural heritage.",
-        duration: "6 Days / 5 Nights",
-        groupSize: "2-18 People",
-        startingPrice: 899,
+        description: "Experience the diverse wonders of Malaysia, from the iconic Petronas Twin Towers to beautiful cultural heritage. Discover a perfect blend of modern cities and rich multicultural traditions.",
+        duration: "3 Days / 2 Nights",
+        groupSize: "2-20 People",
+        startingPrice: 312,
         currency: "USD",
         heroImages: [
             "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=1920&q=80",
@@ -242,18 +204,14 @@ export const packages: TravelPackage[] = [
         highlights: [
             "Petronas Twin Towers",
             "Batu Caves Temple",
-            "Langkawi Island Paradise",
-            "Penang Street Art & Food",
-            "Cameron Highlands",
-            "Malacca Heritage City"
+            "Kuala Lumpur City Tour",
+            "Local Food Experience"
         ],
         included: [
             "Hotel accommodation",
             "Daily breakfast",
-            "Domestic flights",
             "All transfers",
-            "Entrance fees",
-            "English-speaking guide"
+            "City tour"
         ],
         excluded: [
             "International flights",
@@ -265,7 +223,7 @@ export const packages: TravelPackage[] = [
             {
                 day: 1,
                 title: "Arrival in Kuala Lumpur",
-                description: "Welcome to Malaysia! Transfer to your hotel in the heart of Kuala Lumpur.",
+                description: "Welcome to Malaysia! Transfer to your hotel in Kuala Lumpur.",
                 activities: ["Airport pickup", "Hotel check-in", "Petronas Towers evening visit", "KLCC Park walk"]
             },
             {
@@ -276,60 +234,43 @@ export const packages: TravelPackage[] = [
             },
             {
                 day: 3,
-                title: "Fly to Langkawi",
-                description: "Fly to the tropical paradise of Langkawi Island.",
-                activities: ["Flight to Langkawi", "Resort check-in", "Cable car & Sky Bridge", "Sunset cruise"]
-            },
-            {
-                day: 4,
-                title: "Langkawi Adventures",
-                description: "Explore the natural beauty of Langkawi.",
-                activities: ["Island hopping tour", "Mangrove kayaking", "Eagle feeding", "Beach relaxation"]
-            },
-            {
-                day: 5,
-                title: "Langkawi Free Day",
-                description: "Enjoy a free day to explore at your own pace.",
-                activities: ["Free activities", "Optional water sports", "Spa treatments", "Farewell dinner"]
-            },
-            {
-                day: 6,
                 title: "Departure",
-                description: "Transfer to the airport for your departure.",
-                activities: ["Free morning", "Airport transfer"]
+                description: "Free morning before departure.",
+                activities: ["Free morning", "Shopping time", "Airport transfer"]
             }
         ],
         pricingOptions: [
             {
                 name: "Standard",
-                price: 899,
+                price: 312,
                 description: "Value-packed Malaysia tour",
-                features: ["3-star hotels", "Shared transfers", "Group tours", "Basic insurance"]
+                features: ["3-star hotels", "Shared transfers", "Group tours", "Breakfast included"]
             },
             {
                 name: "Premium",
-                price: 1399,
+                price: 437,
                 description: "Enhanced Malaysian experience",
-                features: ["4-star hotels", "Private transfers", "Small group tours", "Full insurance", "Welcome dinner"]
+                features: ["4-star hotels", "Private transfers", "Small group tours", "Welcome dinner"]
             },
             {
                 name: "Luxury",
-                price: 1999,
+                price: 562,
                 description: "Luxurious Malaysian escape",
-                features: ["5-star resorts", "Private transfers", "Private tours", "Premium insurance", "All meals", "Spa package"]
+                features: ["5-star hotels", "Private transfers", "Private tours", "All meals", "Spa treatment"]
             }
         ]
     },
+    // ============ OTHER COUNTRIES - 50% CHEAPER WITH SIMPLIFIED ITINERARIES ============
     {
         id: "4",
         slug: "korea",
         title: "Stunning South Korea",
         country: "South Korea",
         tagline: "Where Tradition Meets K-Culture",
-        description: "Immerse yourself in the dynamic energy of South Korea, from Seoul's futuristic skyline to ancient palaces. Experience the K-pop phenomenon, traditional hanbok, world-class skincare, and incredible cuisine.",
-        duration: "7 Days / 6 Nights",
-        groupSize: "2-16 People",
-        startingPrice: 1599,
+        description: "Immerse yourself in the dynamic energy of South Korea, from Seoul's futuristic skyline to ancient palaces. Experience K-pop culture, traditional hanbok, and incredible cuisine.",
+        duration: "5 Days / 4 Nights",
+        groupSize: "2-20 People",
+        startingPrice: 800,
         currency: "USD",
         heroImages: [
             "https://images.unsplash.com/photo-1517154421773-0529f29ea451?w=1920&q=80",
@@ -340,14 +281,11 @@ export const packages: TravelPackage[] = [
             "Gyeongbokgung Palace",
             "N Seoul Tower",
             "Bukchon Hanok Village",
-            "K-Pop Experience",
-            "Korean BBQ & Street Food",
-            "DMZ Tour"
+            "Korean BBQ Experience"
         ],
         included: [
             "Hotel accommodation",
             "Daily breakfast",
-            "KTX train tickets",
             "All transfers",
             "Entrance fees",
             "Hanbok rental"
@@ -375,51 +313,39 @@ export const packages: TravelPackage[] = [
                 day: 3,
                 title: "Modern Seoul",
                 description: "Experience the modern and trendy side of Seoul.",
-                activities: ["Gangnam district", "COEX Mall", "K-Star Road", "N Seoul Tower sunset", "Hongdae nightlife"]
+                activities: ["Gangnam district", "COEX Mall", "N Seoul Tower sunset", "Hongdae nightlife"]
             },
             {
                 day: 4,
-                title: "DMZ Tour",
-                description: "Visit the historic Demilitarized Zone between North and South Korea.",
-                activities: ["DMZ tour", "JSA Panmunjom", "Imjingak Park", "Afternoon free time", "Dongdaemun shopping"]
+                title: "Free Day",
+                description: "Enjoy a free day to explore at your own pace.",
+                activities: ["Free exploration", "Optional shopping", "Optional Nami Island trip", "Farewell dinner"]
             },
             {
                 day: 5,
-                title: "Day Trip to Nami Island",
-                description: "Visit the picturesque Nami Island, famous from Korean dramas.",
-                activities: ["Nami Island", "Petite France", "Garden of Morning Calm", "Evening street food tour"]
-            },
-            {
-                day: 6,
-                title: "KTX to Busan",
-                description: "Take the high-speed train to Korea's coastal city of Busan.",
-                activities: ["KTX to Busan", "Haeundae Beach", "Gamcheon Culture Village", "Jagalchi Fish Market", "Farewell dinner"]
-            },
-            {
-                day: 7,
                 title: "Departure",
-                description: "Morning free time before transfer to Gimhae Airport.",
+                description: "Morning free time before transfer to airport.",
                 activities: ["Free morning", "Airport transfer"]
             }
         ],
         pricingOptions: [
             {
                 name: "Standard",
-                price: 1599,
+                price: 800,
                 description: "Essential Korea experience",
                 features: ["3-star hotels", "Shared transfers", "Group tours", "Basic insurance"]
             },
             {
                 name: "Premium",
-                price: 2199,
+                price: 1100,
                 description: "Enhanced Korean adventure",
-                features: ["4-star hotels", "Private transfers", "Small group tours", "Full insurance", "Hanbok photoshoot"]
+                features: ["4-star hotels", "Private transfers", "Small group tours", "Hanbok photoshoot"]
             },
             {
                 name: "Luxury",
-                price: 2999,
+                price: 1500,
                 description: "Ultimate K-experience",
-                features: ["5-star hotels", "Private transfers", "Private tours", "Premium insurance", "K-pop concert tickets", "Fine dining"]
+                features: ["5-star hotels", "Private transfers", "Private tours", "Premium insurance", "K-pop experience"]
             }
         ]
     },
@@ -429,10 +355,10 @@ export const packages: TravelPackage[] = [
         title: "Enchanting Japan",
         country: "Japan",
         tagline: "Land of the Rising Sun",
-        description: "Discover the perfect harmony of ancient traditions and cutting-edge technology in Japan. From Tokyo's neon-lit streets to Kyoto's serene temples, experience a journey through time in one of the world's most fascinating countries.",
-        duration: "10 Days / 9 Nights",
-        groupSize: "2-14 People",
-        startingPrice: 2499,
+        description: "Discover the perfect harmony of ancient traditions and cutting-edge technology in Japan. From Tokyo's neon-lit streets to Kyoto's serene temples, experience a journey through time.",
+        duration: "7 Days / 6 Nights",
+        groupSize: "2-18 People",
+        startingPrice: 1250,
         currency: "USD",
         heroImages: [
             "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1920&q=80",
@@ -443,17 +369,14 @@ export const packages: TravelPackage[] = [
             "Tokyo Shibuya & Akihabara",
             "Mount Fuji Views",
             "Kyoto Golden Pavilion",
-            "Fushimi Inari Shrine",
-            "Osaka Castle & Dotonbori",
-            "Traditional Ryokan Stay"
+            "Fushimi Inari Shrine"
         ],
         included: [
-            "Hotel & Ryokan accommodation",
+            "Hotel accommodation",
             "Daily breakfast",
-            "7-day JR Pass",
+            "5-day JR Pass",
             "All transfers",
-            "Entrance fees",
-            "Tea ceremony experience"
+            "Entrance fees"
         ],
         excluded: [
             "International flights",
@@ -472,75 +395,57 @@ export const packages: TravelPackage[] = [
                 day: 2,
                 title: "Tokyo Highlights",
                 description: "Explore the diverse neighborhoods of Tokyo.",
-                activities: ["Senso-ji Temple", "Asakusa district", "Tokyo Skytree", "Akihabara anime district", "Robot Restaurant"]
+                activities: ["Senso-ji Temple", "Asakusa district", "Tokyo Skytree", "Akihabara"]
             },
             {
                 day: 3,
-                title: "Tokyo Modern",
-                description: "Discover Tokyo's trendy and modern attractions.",
-                activities: ["Harajuku fashion street", "Meiji Shrine", "Omotesando", "Shibuya shopping", "Shinjuku nightlife"]
+                title: "Free Day in Tokyo",
+                description: "Enjoy a free day to explore Tokyo at your own pace.",
+                activities: ["Free exploration", "Optional Harajuku visit", "Optional Disney/DisneySea", "Evening free"]
             },
             {
                 day: 4,
-                title: "Mt. Fuji Day Trip",
-                description: "Visit the iconic Mount Fuji and Hakone region.",
-                activities: ["Fuji Five Lakes", "Hakone ropeway", "Lake Ashi cruise", "Hot springs experience"]
+                title: "Shinkansen to Kyoto",
+                description: "Take the bullet train to the ancient capital of Kyoto.",
+                activities: ["Shinkansen experience", "Fushimi Inari Shrine", "Gion geisha district"]
             },
             {
                 day: 5,
-                title: "Shinkansen to Kyoto",
-                description: "Take the bullet train to the ancient capital of Kyoto.",
-                activities: ["Shinkansen experience", "Fushimi Inari Shrine", "Gion geisha district", "Traditional dinner"]
+                title: "Kyoto Temples",
+                description: "Explore Kyoto's UNESCO World Heritage temples.",
+                activities: ["Kinkaku-ji (Golden Pavilion)", "Arashiyama bamboo grove", "Traditional tea ceremony"]
             },
             {
                 day: 6,
-                title: "Kyoto Temples",
-                description: "Explore Kyoto's UNESCO World Heritage temples.",
-                activities: ["Kinkaku-ji (Golden Pavilion)", "Ryoan-ji Zen garden", "Arashiyama bamboo grove", "Tea ceremony"]
+                title: "Free Day in Kyoto",
+                description: "Free day to explore Kyoto or optional day trips.",
+                activities: ["Free exploration", "Optional Nara day trip", "Optional Osaka visit", "Farewell dinner"]
             },
             {
                 day: 7,
-                title: "Nara Day Trip",
-                description: "Visit the ancient capital of Nara, home to friendly deer.",
-                activities: ["Todai-ji Temple", "Nara deer park", "Kasuga Shrine", "Return to Kyoto"]
-            },
-            {
-                day: 8,
-                title: "Osaka Adventure",
-                description: "Experience the vibrant city of Osaka.",
-                activities: ["Train to Osaka", "Osaka Castle", "Dotonbori street food", "Shinsaibashi shopping"]
-            },
-            {
-                day: 9,
-                title: "Free Day",
-                description: "Enjoy a free day to explore at your own pace.",
-                activities: ["Optional Universal Studios", "Shopping", "Free exploration", "Farewell dinner"]
-            },
-            {
-                day: 10,
                 title: "Departure",
-                description: "Transfer to Osaka Kansai Airport for your flight home.",
+                description: "Transfer to Kansai Airport for your flight home.",
                 activities: ["Free morning", "Airport transfer"]
             }
         ],
         pricingOptions: [
             {
                 name: "Standard",
-                price: 2499,
+                price: 1250,
                 description: "Essential Japan experience",
-                features: ["3-star hotels", "7-day JR Pass", "Group tours", "Basic insurance"]
+                features: ["3-star hotels", "5-day JR Pass", "Group tours", "Basic insurance"]
             },
             {
                 name: "Premium",
-                price: 3499,
+                price: 1750,
                 description: "Enhanced Japanese journey",
-                features: ["4-star hotels + 1 night ryokan", "7-day JR Pass Green", "Small group tours", "Full insurance", "Kimono experience"]
+                features: ["4-star hotels", "5-day JR Pass Green", "Small group tours", "Kimono experience"]
             },
             {
                 name: "Luxury",
-                price: 4999,
+                price: 2500,
                 description: "Ultimate Japan luxury",
-                features: ["5-star hotels + 2 nights ryokan", "JR Pass Green", "Private tours", "Premium insurance", "Kaiseki dinners", "Private tea ceremony"]
+                features: ["5-star hotels + 1 night ryokan", "JR Pass Green", "Private tours", "Kaiseki dinners"]
             }
         ]
     },
@@ -550,10 +455,10 @@ export const packages: TravelPackage[] = [
         title: "Amazing Australia",
         country: "Australia",
         tagline: "The Land Down Under",
-        description: "Explore the vast wonders of Australia, from the iconic Sydney Opera House to the Great Barrier Reef. Experience diverse wildlife, stunning landscapes, and vibrant cities in this extraordinary continent.",
-        duration: "10 Days / 9 Nights",
-        groupSize: "2-16 People",
-        startingPrice: 3299,
+        description: "Explore the vast wonders of Australia, from the iconic Sydney Opera House to beautiful beaches. Experience diverse wildlife, stunning landscapes, and vibrant city life.",
+        duration: "7 Days / 6 Nights",
+        groupSize: "2-20 People",
+        startingPrice: 1650,
         currency: "USD",
         heroImages: [
             "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=1920&q=80",
@@ -562,19 +467,16 @@ export const packages: TravelPackage[] = [
         ],
         highlights: [
             "Sydney Opera House",
-            "Great Barrier Reef",
-            "Uluru (Ayers Rock)",
-            "Great Ocean Road",
-            "Koala & Kangaroo Encounters",
-            "Melbourne Laneways"
+            "Sydney Harbour Bridge",
+            "Bondi Beach",
+            "Blue Mountains"
         ],
         included: [
             "Hotel accommodation",
             "Daily breakfast",
-            "Domestic flights",
             "All transfers",
-            "Reef cruise",
-            "National park fees"
+            "Entrance fees",
+            "City tour"
         ],
         excluded: [
             "International flights",
@@ -593,75 +495,57 @@ export const packages: TravelPackage[] = [
                 day: 2,
                 title: "Sydney Icons",
                 description: "Explore Sydney's world-famous landmarks.",
-                activities: ["Opera House tour", "Harbour Bridge climb", "The Rocks historic area", "Darling Harbour"]
+                activities: ["Opera House tour", "Harbour Bridge walk", "The Rocks historic area", "Darling Harbour"]
             },
             {
                 day: 3,
                 title: "Sydney Beaches",
                 description: "Discover Sydney's beautiful coastal areas.",
-                activities: ["Bondi Beach", "Bondi to Coogee walk", "Taronga Zoo", "Manly Beach ferry"]
+                activities: ["Bondi Beach", "Bondi to Coogee walk", "Afternoon at Manly Beach"]
             },
             {
                 day: 4,
-                title: "Fly to Cairns",
-                description: "Fly to Cairns, gateway to the Great Barrier Reef.",
-                activities: ["Flight to Cairns", "Hotel check-in", "Cairns Esplanade", "Night markets"]
+                title: "Free Day",
+                description: "Enjoy a free day to explore Sydney at your own pace.",
+                activities: ["Free exploration", "Optional Taronga Zoo", "Optional shopping", "Evening free"]
             },
             {
                 day: 5,
-                title: "Great Barrier Reef",
-                description: "Full day exploring the magnificent Great Barrier Reef.",
-                activities: ["Reef cruise", "Snorkeling", "Glass-bottom boat", "Marine life viewing"]
+                title: "Blue Mountains",
+                description: "Day trip to the stunning Blue Mountains.",
+                activities: ["Blue Mountains drive", "Three Sisters viewpoint", "Scenic World", "Katoomba village"]
             },
             {
                 day: 6,
-                title: "Daintree Rainforest",
-                description: "Explore the world's oldest rainforest.",
-                activities: ["Daintree cruise", "Rainforest walk", "Aboriginal culture", "Cape Tribulation"]
+                title: "Free Day",
+                description: "Another free day for personal exploration.",
+                activities: ["Free exploration", "Optional wildlife park", "Farewell dinner"]
             },
             {
                 day: 7,
-                title: "Fly to Melbourne",
-                description: "Fly to the cultural capital of Melbourne.",
-                activities: ["Flight to Melbourne", "Laneway art tour", "Coffee culture", "Chinatown dinner"]
-            },
-            {
-                day: 8,
-                title: "Great Ocean Road",
-                description: "Day trip along the spectacular Great Ocean Road.",
-                activities: ["Great Ocean Road drive", "Twelve Apostles", "Loch Ard Gorge", "Koala spotting"]
-            },
-            {
-                day: 9,
-                title: "Melbourne Exploration",
-                description: "Discover Melbourne's diverse neighborhoods.",
-                activities: ["Queen Victoria Market", "Royal Botanic Gardens", "St Kilda Beach", "Farewell dinner"]
-            },
-            {
-                day: 10,
                 title: "Departure",
-                description: "Transfer to Melbourne Airport for your departure.",
+                description: "Transfer to Sydney Airport for your departure.",
                 activities: ["Free morning", "Airport transfer"]
             }
         ],
         pricingOptions: [
             {
                 name: "Standard",
-                price: 3299,
+                price: 1650,
                 description: "Essential Australia adventure",
-                features: ["3-star hotels", "Domestic flights", "Group tours", "Basic insurance"]
+                features: ["3-star hotels", "Shared transfers", "Group tours", "Basic insurance"]
             },
             {
                 name: "Premium",
-                price: 4299,
+                price: 2150,
                 description: "Enhanced Australian journey",
-                features: ["4-star hotels", "Domestic flights", "Small group tours", "Full insurance", "Reef overnight stay"]
+                features: ["4-star hotels", "Private transfers", "Small group tours", "Wine tasting"]
             },
             {
                 name: "Luxury",
-                price: 5999,
+                price: 3000,
                 description: "Ultimate Australia luxury",
-                features: ["5-star hotels", "Premium domestic flights", "Private tours", "Premium insurance", "Helicopter reef tour", "Fine dining"]
+                features: ["5-star hotels", "Private transfers", "Private tours", "Premium insurance", "Fine dining"]
             }
         ]
     },
@@ -671,10 +555,10 @@ export const packages: TravelPackage[] = [
         title: "European Discovery",
         country: "Europe",
         tagline: "Schengen Multi-Country Adventure",
-        description: "Embark on an unforgettable journey through Europe's most iconic destinations. From the romance of Paris to the history of Rome, experience the diverse cultures, stunning architecture, and culinary delights of the Schengen zone.",
-        duration: "14 Days / 13 Nights",
-        groupSize: "2-20 People",
-        startingPrice: 3999,
+        description: "Embark on an unforgettable journey through Europe's most iconic destinations. Experience the diverse cultures, stunning architecture, and culinary delights of the Schengen zone.",
+        duration: "10 Days / 9 Nights",
+        groupSize: "2-25 People",
+        startingPrice: 2000,
         currency: "USD",
         heroImages: [
             "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1920&q=80",
@@ -685,17 +569,14 @@ export const packages: TravelPackage[] = [
             "Eiffel Tower, Paris",
             "Colosseum, Rome",
             "Swiss Alps",
-            "Barcelona's Gaudí",
-            "Amsterdam Canals",
-            "German Fairy-tale Castles"
+            "Amsterdam Canals"
         ],
         included: [
             "Hotel accommodation",
             "Daily breakfast",
             "Eurail pass",
             "All transfers",
-            "Entrance fees to major attractions",
-            "Local guides"
+            "Major attractions entrance"
         ],
         excluded: [
             "International flights",
@@ -715,99 +596,75 @@ export const packages: TravelPackage[] = [
                 day: 2,
                 title: "Paris Landmarks",
                 description: "Explore the iconic landmarks of Paris.",
-                activities: ["Eiffel Tower", "Louvre Museum", "Notre-Dame (exterior)", "Champs-Élysées", "Arc de Triomphe"]
+                activities: ["Eiffel Tower", "Louvre Museum", "Champs-Élysées", "Arc de Triomphe"]
             },
             {
                 day: 3,
-                title: "Paris to Amsterdam",
-                description: "Travel by train to the charming city of Amsterdam.",
-                activities: ["Train to Amsterdam", "Canal cruise", "Anne Frank House", "Red Light District walk"]
+                title: "Free Day in Paris",
+                description: "Free day to explore Paris at your leisure.",
+                activities: ["Free exploration", "Optional Versailles trip", "Optional Montmartre visit"]
             },
             {
                 day: 4,
-                title: "Amsterdam Exploration",
-                description: "Discover the best of Amsterdam.",
-                activities: ["Van Gogh Museum", "Rijksmuseum", "Vondelpark", "Dutch cheese tasting"]
+                title: "Paris to Amsterdam",
+                description: "Travel by train to the charming city of Amsterdam.",
+                activities: ["Train to Amsterdam", "Canal cruise", "Hotel check-in", "Evening at leisure"]
             },
             {
                 day: 5,
-                title: "Amsterdam to Munich",
-                description: "Train journey through Germany to Munich.",
-                activities: ["Train to Munich", "Marienplatz", "Glockenspiel", "Beer hall dinner"]
+                title: "Amsterdam & Free Time",
+                description: "Half day tour followed by free time.",
+                activities: ["Van Gogh Museum", "Rijksmuseum", "Free afternoon", "Red Light District walk"]
             },
             {
                 day: 6,
-                title: "Neuschwanstein Castle",
-                description: "Day trip to Germany's fairy-tale castle.",
-                activities: ["Neuschwanstein Castle tour", "Hohenschwangau", "Bavarian Alps views"]
+                title: "Amsterdam to Switzerland",
+                description: "Journey to the beautiful Swiss Alps.",
+                activities: ["Train to Lucerne", "Chapel Bridge", "Lake Lucerne walk", "Swiss dinner"]
             },
             {
                 day: 7,
-                title: "Munich to Switzerland",
-                description: "Journey to the beautiful Swiss Alps.",
-                activities: ["Train to Lucerne", "Chapel Bridge", "Lake Lucerne cruise", "Swiss fondue dinner"]
+                title: "Free Day in Switzerland",
+                description: "Free day to enjoy the Alps.",
+                activities: ["Free exploration", "Optional Mount Pilatus", "Optional lake activities"]
             },
             {
                 day: 8,
-                title: "Swiss Alps Adventure",
-                description: "Experience the majestic Swiss Alps.",
-                activities: ["Mount Pilatus or Titlis", "Alpine views", "Mountain activities"]
+                title: "Switzerland to Rome",
+                description: "Travel to the Eternal City.",
+                activities: ["Scenic train to Rome", "Hotel check-in", "Evening walk", "Roman dinner"]
             },
             {
                 day: 9,
-                title: "Switzerland to Italy",
-                description: "Travel through the dramatic Gotthard route to Italy.",
-                activities: ["Scenic train to Milan", "Milan Duomo", "Galleria Vittorio Emanuele II"]
+                title: "Rome Highlights",
+                description: "Explore Rome's ancient wonders.",
+                activities: ["Colosseum", "Roman Forum", "Trevi Fountain", "Spanish Steps", "Farewell dinner"]
             },
             {
                 day: 10,
-                title: "Florence",
-                description: "Explore the Renaissance city of Florence.",
-                activities: ["Train to Florence", "Uffizi Gallery", "Ponte Vecchio", "Piazzale Michelangelo sunset"]
-            },
-            {
-                day: 11,
-                title: "Rome",
-                description: "Discover the Eternal City of Rome.",
-                activities: ["Train to Rome", "Colosseum", "Roman Forum", "Trevi Fountain", "Spanish Steps"]
-            },
-            {
-                day: 12,
-                title: "Vatican City",
-                description: "Explore the smallest country in the world.",
-                activities: ["Vatican Museums", "Sistine Chapel", "St. Peter's Basilica", "Trastevere dinner"]
-            },
-            {
-                day: 13,
-                title: "Rome to Barcelona",
-                description: "Fly to the vibrant city of Barcelona.",
-                activities: ["Flight to Barcelona", "Las Ramblas", "Gothic Quarter", "Tapas dinner"]
-            },
-            {
-                day: 14,
-                title: "Barcelona & Departure",
-                description: "Morning Barcelona tour before departure.",
-                activities: ["Sagrada Familia", "Park Güell", "Airport transfer"]
+                title: "Departure",
+                description: "Transfer to Rome airport for departure.",
+                activities: ["Free morning", "Airport transfer"]
             }
         ],
         pricingOptions: [
             {
                 name: "Standard",
-                price: 3999,
+                price: 2000,
                 description: "Essential Europe experience",
                 features: ["3-star hotels", "2nd class Eurail", "Group tours", "Basic insurance"]
             },
             {
                 name: "Premium",
-                price: 5499,
+                price: 2750,
                 description: "Enhanced European journey",
-                features: ["4-star hotels", "1st class Eurail", "Skip-the-line access", "Full insurance", "Wine tastings"]
+                features: ["4-star hotels", "1st class Eurail", "Skip-the-line access", "Wine tastings"]
             },
             {
                 name: "Luxury",
-                price: 7999,
+                price: 4000,
                 description: "Ultimate European luxury",
-                features: ["5-star hotels", "1st class Eurail", "Private tours", "Premium insurance", "Michelin dining", "Private transfers"]
+                features: ["5-star hotels", "1st class Eurail", "Private tours", "Michelin dining", "Private transfers"]
             }
         ]
     },
@@ -817,10 +674,10 @@ export const packages: TravelPackage[] = [
         title: "Umrah Pilgrimage",
         country: "Saudi Arabia",
         tagline: "A Journey of Faith",
-        description: "Embark on a spiritually fulfilling Umrah pilgrimage to the holiest sites in Islam. Experience the profound peace of Makkah and Madinah with our carefully crafted packages that combine spiritual guidance with comfortable accommodations.",
-        duration: "10 Days / 9 Nights",
+        description: "Embark on a spiritually fulfilling Umrah pilgrimage to the holiest sites in Islam. Experience the profound peace of Makkah and Madinah with our carefully crafted packages.",
+        duration: "9 Days / 8 Nights",
         groupSize: "4-40 People",
-        startingPrice: 2499,
+        startingPrice: 1250,
         currency: "USD",
         heroImages: [
             "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=1920&q=80",
@@ -830,9 +687,7 @@ export const packages: TravelPackage[] = [
         highlights: [
             "Masjid al-Haram (Grand Mosque)",
             "Kaaba Tawaf",
-            "Sa'i between Safa and Marwa",
             "Masjid an-Nabawi",
-            "Rawdah Prayer",
             "Historical Islamic Sites"
         ],
         included: [
@@ -841,15 +696,13 @@ export const packages: TravelPackage[] = [
             "Visa processing",
             "Airport transfers",
             "Ziyarat tours",
-            "Experienced Mutawwif guide",
-            "Air-conditioned transportation"
+            "Experienced guide"
         ],
         excluded: [
             "International flights",
             "Ihram clothing",
             "Personal expenses",
-            "Lunch meals",
-            "Optional activities"
+            "Lunch meals"
         ],
         itinerary: [
             {
@@ -862,7 +715,7 @@ export const packages: TravelPackage[] = [
                 day: 2,
                 title: "Arrival in Makkah",
                 description: "Arrive in Jeddah and transfer to Makkah.",
-                activities: ["Airport pickup", "Transfer to Makkah", "Hotel check-in", "First glimpse of Kaaba", "Umrah rituals begin"]
+                activities: ["Airport pickup", "Transfer to Makkah", "Hotel check-in", "Umrah rituals begin"]
             },
             {
                 day: 3,
@@ -872,65 +725,149 @@ export const packages: TravelPackage[] = [
             },
             {
                 day: 4,
-                title: "Makkah Prayers",
+                title: "Free Day in Makkah",
                 description: "Spend the day in prayers and reflection.",
-                activities: ["Five daily prayers at Haram", "Quran recitation", "Dua and reflection"]
+                activities: ["Five daily prayers at Haram", "Quran recitation", "Free time for worship"]
             },
             {
                 day: 5,
-                title: "Makkah Ziyarat",
-                description: "Visit historical Islamic sites around Makkah.",
-                activities: ["Jabal al-Nour (Hira Cave)", "Jabal Thawr", "Mina, Muzdalifah, Arafat"]
+                title: "Transfer to Madinah",
+                description: "Travel to the blessed city of Madinah.",
+                activities: ["Bus to Madinah", "Hotel check-in", "Maghrib at Prophet's Mosque"]
             },
             {
                 day: 6,
-                title: "Transfer to Madinah",
-                description: "Travel to the blessed city of Madinah.",
-                activities: ["Bus to Madinah", "Hotel check-in near Masjid Nabawi", "Maghrib at Prophet's Mosque"]
+                title: "Madinah Prayers",
+                description: "Spend the day at the Prophet's Mosque.",
+                activities: ["Prayers at Masjid Nabawi", "Rawdah visit (if possible)", "Free time"]
             },
             {
                 day: 7,
-                title: "Madinah Prayers",
-                description: "Spend the day at the Prophet's Mosque.",
-                activities: ["40 prayers goal begins", "Rawdah visit (if possible)", "Prayers at Masjid Nabawi"]
+                title: "Madinah Ziyarat",
+                description: "Visit historical sites in Madinah.",
+                activities: ["Quba Mosque", "Uhud Mountain", "Qiblatain Mosque", "Date market"]
             },
             {
                 day: 8,
-                title: "Madinah Ziyarat",
-                description: "Visit historical sites in Madinah.",
-                activities: ["Quba Mosque", "Uhud Mountain & Martyrs' Cemetery", "Qiblatain Mosque", "Date market"]
-            },
-            {
-                day: 9,
-                title: "Final Day in Madinah",
-                description: "Last day for prayers and shopping.",
+                title: "Free Day in Madinah",
+                description: "Final day for prayers and shopping.",
                 activities: ["Morning prayers", "Free time for shopping", "Final prayers at Masjid Nabawi"]
             },
             {
-                day: 10,
+                day: 9,
                 title: "Departure",
-                description: "Transfer to Madinah or Jeddah airport for departure.",
+                description: "Transfer to airport for departure.",
                 activities: ["Farewell prayers", "Airport transfer", "Departure flight"]
             }
         ],
         pricingOptions: [
             {
                 name: "Economy",
-                price: 2499,
+                price: 1250,
                 description: "Value Umrah package",
-                features: ["4-star hotel (500m from Haram)", "Shared room (4 per room)", "Bus transfers", "Breakfast & dinner", "Group ziyarat"]
+                features: ["4-star hotel (500m from Haram)", "Shared room (4 per room)", "Bus transfers", "Breakfast & dinner"]
             },
             {
                 name: "Premium",
-                price: 3499,
+                price: 1750,
                 description: "Comfortable Umrah experience",
-                features: ["5-star hotel (200m from Haram)", "Shared room (2 per room)", "Private transfers", "All meals", "Group ziyarat", "Zamzam water"]
+                features: ["5-star hotel (200m from Haram)", "Shared room (2 per room)", "Private transfers", "All meals"]
             },
             {
                 name: "VIP",
-                price: 5499,
+                price: 2750,
                 description: "Exclusive Umrah journey",
-                features: ["5-star hotel (Haram view)", "Private room", "Private car transfers", "All meals", "Private ziyarat", "24/7 assistance", "Business class option"]
+                features: ["5-star hotel (Haram view)", "Private room", "Private car transfers", "All meals", "24/7 assistance"]
+            }
+        ]
+    },
+    // ============ NEW DESTINATION - SLOVAKIA ============
+    {
+        id: "9",
+        slug: "slovakia",
+        title: "Discover Slovakia",
+        country: "Slovakia",
+        tagline: "Hidden Gem of Central Europe",
+        description: "Explore the enchanting beauty of Slovakia, a hidden gem nestled in the heart of Central Europe. From medieval castles to stunning natural landscapes, discover a country rich in history, culture, and breathtaking scenery.",
+        duration: "5 Days / 4 Nights",
+        groupSize: "2-16 People",
+        startingPrice: 750,
+        currency: "USD",
+        heroImages: [
+            "https://images.unsplash.com/photo-1562779346-e43d30d2e647?w=1920&q=80",
+            "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=1920&q=80",
+            "https://images.unsplash.com/photo-1555990793-da11153b2473?w=1920&q=80"
+        ],
+        highlights: [
+            "Bratislava Old Town",
+            "Bratislava Castle",
+            "High Tatras Mountains",
+            "Spiš Castle (UNESCO)",
+            "Traditional Slovak Cuisine"
+        ],
+        included: [
+            "Hotel accommodation",
+            "Daily breakfast",
+            "All transfers",
+            "Entrance fees",
+            "English-speaking guide"
+        ],
+        excluded: [
+            "International flights",
+            "Travel insurance",
+            "Personal expenses",
+            "Meals not mentioned"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                title: "Arrival in Bratislava",
+                description: "Welcome to Slovakia! Arrive at Bratislava Airport and transfer to your hotel in the charming old town.",
+                activities: ["Airport pickup", "Hotel check-in", "Old Town walking tour", "Welcome dinner with traditional Slovak food"]
+            },
+            {
+                day: 2,
+                title: "Bratislava Exploration",
+                description: "Explore the historic capital city of Slovakia.",
+                activities: ["Bratislava Castle visit", "St. Martin's Cathedral", "Michael's Gate", "Danube riverfront walk", "Evening at UFO observation deck"]
+            },
+            {
+                day: 3,
+                title: "High Tatras Day Trip",
+                description: "Journey to the stunning High Tatras mountain range.",
+                activities: ["Drive to High Tatras", "Cable car ride", "Mountain hiking", "Štrbské Pleso lake visit", "Traditional mountain lunch"]
+            },
+            {
+                day: 4,
+                title: "Free Day",
+                description: "Enjoy a free day to explore at your own pace.",
+                activities: ["Free exploration", "Optional wine tasting in nearby vineyards", "Optional thermal spa visit", "Farewell dinner"]
+            },
+            {
+                day: 5,
+                title: "Departure",
+                description: "Free morning before your airport transfer.",
+                activities: ["Free morning", "Last-minute shopping", "Airport transfer"]
+            }
+        ],
+        pricingOptions: [
+            {
+                name: "Standard",
+                price: 750,
+                description: "Essential Slovakia experience",
+                features: ["3-star hotels", "Shared transfers", "Group tours", "Breakfast included"]
+            },
+            {
+                name: "Premium",
+                price: 1050,
+                description: "Enhanced Slovak journey",
+                features: ["4-star hotels", "Private transfers", "Small group tours", "Welcome dinner", "Wine tasting"]
+            },
+            {
+                name: "Luxury",
+                price: 1500,
+                description: "Premium Slovakia experience",
+                features: ["5-star hotels", "Private transfers", "Private tours", "All meals", "Spa experience", "Fine dining"]
             }
         ]
     }

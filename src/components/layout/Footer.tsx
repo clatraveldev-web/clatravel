@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { Plane, Mail, Phone, MapPin, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -14,14 +17,6 @@ const destinations = [
     { href: "/packages/umrah", label: "Umrah" },
 ];
 
-const quickLinks = [
-    { href: "/", label: "Home" },
-    { href: "/#destinations", label: "Destinations" },
-    { href: "/#packages", label: "All Packages" },
-    { href: "/#about", label: "About Us" },
-    { href: "/#contact", label: "Contact" },
-];
-
 const socialLinks = [
     { href: "#", icon: Facebook, label: "Facebook" },
     { href: "#", icon: Instagram, label: "Instagram" },
@@ -30,6 +25,17 @@ const socialLinks = [
 ];
 
 export function Footer() {
+    const t = useTranslations("footer");
+    const tNav = useTranslations("nav");
+
+    const quickLinks = [
+        { href: "/", label: tNav("home") },
+        { href: "/#destinations", label: tNav("destinations") },
+        { href: "/#packages", label: tNav("packages") },
+        { href: "/#about", label: tNav("about") },
+        { href: "/#contact", label: tNav("contact") },
+    ];
+
     return (
         <footer id="contact" className="bg-foreground text-background">
             {/* Newsletter Section */}
@@ -38,20 +44,20 @@ export function Footer() {
                     <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                         <div className="text-center md:text-left">
                             <h3 className="text-2xl font-bold text-primary-foreground mb-2">
-                                Subscribe to Our Newsletter
+                                {t("newsletterTitle")}
                             </h3>
                             <p className="text-primary-foreground/80">
-                                Get exclusive travel deals and updates delivered to your inbox
+                                {t("newsletterDescription")}
                             </p>
                         </div>
                         <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto items-stretch">
                             <input
                                 type="email"
-                                placeholder="Enter your email"
+                                placeholder={t("emailPlaceholder")}
                                 className="h-12 px-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 min-w-[280px]"
                             />
                             <Button className="h-12 bg-secondary text-secondary-foreground hover:bg-secondary/90 px-6">
-                                Subscribe
+                                {t("subscribe")}
                             </Button>
                         </div>
                     </div>
@@ -71,7 +77,7 @@ export function Footer() {
                                 <span className="text-xl font-bold">ClaTravel</span>
                             </Link>
                             <p className="text-muted-foreground text-sm leading-relaxed">
-                                Your trusted partner for extraordinary travel experiences. We craft memorable journeys to the world&apos;s most beautiful destinations with care and expertise.
+                                {t("tagline")}
                             </p>
                             <div className="flex gap-3">
                                 {socialLinks.map((social) => (
@@ -89,7 +95,7 @@ export function Footer() {
 
                         {/* Destinations */}
                         <div>
-                            <h4 className="font-semibold text-lg mb-6">Destinations</h4>
+                            <h4 className="font-semibold text-lg mb-6">{tNav("destinations")}</h4>
                             <ul className="space-y-3">
                                 {destinations.map((dest) => (
                                     <li key={dest.href}>
@@ -106,7 +112,7 @@ export function Footer() {
 
                         {/* Quick Links */}
                         <div>
-                            <h4 className="font-semibold text-lg mb-6">Quick Links</h4>
+                            <h4 className="font-semibold text-lg mb-6">{tNav("home")}</h4>
                             <ul className="space-y-3">
                                 {quickLinks.map((link) => (
                                     <li key={link.href}>
@@ -123,7 +129,7 @@ export function Footer() {
 
                         {/* Contact Info */}
                         <div>
-                            <h4 className="font-semibold text-lg mb-6">Contact Us</h4>
+                            <h4 className="font-semibold text-lg mb-6">{t("contactUs")}</h4>
                             <ul className="space-y-4">
                                 <li className="flex items-start gap-3">
                                     <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
@@ -170,13 +176,13 @@ export function Footer() {
             <div className="py-6">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-                        <p>&copy; {new Date().getFullYear()} ClaTravel. All rights reserved.</p>
+                        <p>{t("copyright")}</p>
                         <div className="flex gap-6">
                             <Link href="#" className="hover:text-primary transition-colors">
-                                Privacy Policy
+                                {t("privacyPolicy")}
                             </Link>
                             <Link href="#" className="hover:text-primary transition-colors">
-                                Terms of Service
+                                {t("termsConditions")}
                             </Link>
                         </div>
                     </div>
