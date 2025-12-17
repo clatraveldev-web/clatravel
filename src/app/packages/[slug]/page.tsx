@@ -33,14 +33,52 @@ export async function generateMetadata({ params }: PackagePageProps): Promise<Me
 
     if (!pkg) {
         return {
-            title: "Package Not Found - ClaTravel",
+            title: "Package Not Found",
+            description: "The requested travel package could not be found.",
         };
     }
 
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://clatravel.com";
+    const pageUrl = `${siteUrl}/packages/${slug}`;
+    const formattedPrice = formatIDR(pkg.startingPrice);
+
     return {
-        title: `${pkg.title} - ClaTravel`,
-        description: pkg.description,
-        keywords: `${pkg.country} travel, ${pkg.title}, tour package, vacation, ${pkg.highlights.join(", ")}`,
+        title: pkg.title,
+        description: `${pkg.description} Starting from ${formattedPrice}. ${pkg.duration}, ${pkg.groupSize}.`,
+        keywords: [
+            `${pkg.country} travel`,
+            `${pkg.country} tour package`,
+            pkg.title,
+            "vacation",
+            "holiday",
+            "travel agency Indonesia",
+            ...pkg.highlights,
+        ],
+        openGraph: {
+            type: "website",
+            locale: "id_ID",
+            url: pageUrl,
+            siteName: "ClaTravel",
+            title: `${pkg.title} - Travel Package | ClaTravel`,
+            description: `${pkg.tagline}. ${pkg.description.slice(0, 150)}...`,
+            images: [
+                {
+                    url: pkg.heroImages[0],
+                    width: 1200,
+                    height: 630,
+                    alt: pkg.title,
+                },
+            ],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: `${pkg.title} - ClaTravel`,
+            description: `${pkg.tagline}. Starting from ${formattedPrice}. Book now!`,
+            images: [pkg.heroImages[0]],
+        },
+        alternates: {
+            canonical: pageUrl,
+        },
     };
 }
 
