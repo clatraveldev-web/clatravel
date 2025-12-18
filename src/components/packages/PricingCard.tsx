@@ -46,9 +46,9 @@ export function PricingCard({ options }: PricingCardProps) {
                                 : "border-border hover:border-primary/50"
                                 }`}
                         >
-                            <div className="flex items-center justify-between mb-2">
+                            <div className="flex items-center justify-between gap-2 mb-2">
                                 <span className="font-semibold text-foreground">{option.name}</span>
-                                <span className="text-lg font-bold text-primary">
+                                <span className="text-sm font-bold text-primary whitespace-nowrap">
                                     {formatIDR(option.price)}
                                 </span>
                             </div>
@@ -77,7 +77,7 @@ export function PricingCard({ options }: PricingCardProps) {
                     <div className="flex items-center justify-between mb-4">
                         <span className="text-muted-foreground">Total Price</span>
                         <div className="text-right">
-                            <p className="text-2xl font-bold text-primary">
+                            <p className="text-xl font-bold text-primary">
                                 {formatIDR(options[selectedOption].price)}
                             </p>
                             <p className="text-xs text-muted-foreground">per person</p>

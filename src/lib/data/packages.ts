@@ -38,7 +38,7 @@ export const packages: TravelPackage[] = [
         description: "Experience the magic of Singapore, a dazzling city-state where futuristic architecture blends seamlessly with rich cultural heritage. A perfect quick getaway to Asia's most exciting destination.",
         duration: "3 Days / 2 Nights",
         groupSize: "2-20 People",
-        startingPrice: 312,
+        startingPrice: 312.5,
         currency: "USD",
         heroImages: [
             "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1920&q=80",
@@ -86,7 +86,7 @@ export const packages: TravelPackage[] = [
         pricingOptions: [
             {
                 name: "Standard",
-                price: 312,
+                price: 312.5,
                 description: "Budget-friendly Singapore trip",
                 features: ["3-star hotel", "Shared transfers", "Group tours", "Breakfast included"]
             },
@@ -113,7 +113,7 @@ export const packages: TravelPackage[] = [
         description: "Discover the enchanting beauty of Thailand, from the golden temples of Bangkok to the vibrant street markets. Experience world-class cuisine and the warmest hospitality in Southeast Asia.",
         duration: "4 Days / 3 Nights",
         groupSize: "2-25 People",
-        startingPrice: 312,
+        startingPrice: 312.5,
         currency: "USD",
         heroImages: [
             "https://images.unsplash.com/photo-1528181304800-259b08848526?w=1920&q=80",
@@ -167,7 +167,7 @@ export const packages: TravelPackage[] = [
         pricingOptions: [
             {
                 name: "Standard",
-                price: 312,
+                price: 312.5,
                 description: "Great value Thailand trip",
                 features: ["3-star hotels", "Shared transfers", "Group tours", "Breakfast included"]
             },
@@ -194,7 +194,7 @@ export const packages: TravelPackage[] = [
         description: "Experience the diverse wonders of Malaysia, from the iconic Petronas Twin Towers to beautiful cultural heritage. Discover a perfect blend of modern cities and rich multicultural traditions.",
         duration: "3 Days / 2 Nights",
         groupSize: "2-20 People",
-        startingPrice: 312,
+        startingPrice: 312.5,
         currency: "USD",
         heroImages: [
             "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=1920&q=80",
@@ -242,7 +242,7 @@ export const packages: TravelPackage[] = [
         pricingOptions: [
             {
                 name: "Standard",
-                price: 312,
+                price: 312.5,
                 description: "Value-packed Malaysia tour",
                 features: ["3-star hotels", "Shared transfers", "Group tours", "Breakfast included"]
             },
