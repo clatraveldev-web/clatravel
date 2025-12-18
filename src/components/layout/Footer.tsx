@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Plane, Mail, Phone, MapPin, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
@@ -70,11 +71,14 @@ export function Footer() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                         {/* Company Info */}
                         <div className="space-y-6">
-                            <Link href="/" className="flex items-center gap-2">
-                                <div className="p-2 rounded-lg bg-primary">
-                                    <Plane className="h-6 w-6 text-primary-foreground" />
-                                </div>
-                                <span className="text-xl font-bold">ClaTravel</span>
+                            <Link href="/" className="flex items-center">
+                                <Image
+                                    src="/clalogo.png"
+                                    alt="ClaTravel Logo"
+                                    width={120}
+                                    height={40}
+                                    className="h-10 w-auto"
+                                />
                             </Link>
                             <p className="text-muted-foreground text-sm leading-relaxed">
                                 {t("tagline")}

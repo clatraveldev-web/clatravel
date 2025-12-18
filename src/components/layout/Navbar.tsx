@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Plane } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { WHATSAPP_LINK } from "@/lib/utils";
 
 export function Navbar() {
@@ -53,13 +54,19 @@ export function Navbar() {
                 <div className="container mx-auto px-4">
                     <nav className="flex items-center justify-between h-20">
                         {/* Logo */}
-                        <Link href="/" className="flex items-center gap-2 group">
-                            <div className={`p-2 rounded-lg transition-colors ${isScrolled ? 'bg-primary' : 'bg-white/20 backdrop-blur-sm'}`}>
-                                <Plane className={`h-6 w-6 transition-colors ${isScrolled ? 'text-primary-foreground' : 'text-white'}`} />
-                            </div>
-                            <span className={`text-xl font-bold transition-colors ${isScrolled ? 'text-foreground' : 'text-white'}`}>
-                                ClaTravel
-                            </span>
+                        <Link href="/" className="flex items-center group">
+                            <Image
+                                src="/clalogo.png"
+                                alt="ClaTravel Logo"
+                                width={120}
+                                height={40}
+                                className="h-10 w-auto transition-all duration-300"
+                                style={isScrolled
+                                    ? { mixBlendMode: 'multiply' }
+                                    : { filter: 'brightness(0) invert(1)' }
+                                }
+                                priority
+                            />
                         </Link>
 
                         {/* Desktop Navigation */}
@@ -138,11 +145,15 @@ export function Navbar() {
                     </Button>
 
                     {/* Logo at bottom */}
-                    <div className="absolute bottom-10 flex items-center gap-2">
-                        <div className="p-2 rounded-lg bg-primary">
-                            <Plane className="h-5 w-5 text-primary-foreground" />
-                        </div>
-                        <span className="text-lg font-bold text-muted-foreground">ClaTravel</span>
+                    <div className="absolute bottom-10 flex items-center">
+                        <Image
+                            src="/clalogo.png"
+                            alt="ClaTravel Logo"
+                            width={100}
+                            height={33}
+                            className="h-8 w-auto"
+                            style={{ mixBlendMode: 'multiply' }}
+                        />
                     </div>
                 </div>
             </div>
