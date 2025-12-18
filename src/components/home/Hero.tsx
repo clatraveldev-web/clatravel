@@ -1,14 +1,10 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Calendar, Users } from "lucide-react";
 import Link from "next/link";
 
 export function Hero() {
-    const t = useTranslations("hero");
-    const tCommon = useTranslations("common");
-
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background Image */}
@@ -39,19 +35,19 @@ export function Hero() {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
                         </span>
-                        <span className="text-sm font-medium">{t("badge")}</span>
+                        <span className="text-sm font-medium">Premium Travel Experience</span>
                     </div>
 
                     {/* Heading */}
                     <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight">
-                        {t("title")}{" "}
-                        <span className="text-secondary">{t("titleHighlight")}</span>{" "}
-                        {t("titleEnd")}
+                        Wujudkan Liburan{" "}
+                        <span className="text-secondary">Impian</span>{" "}
+                        Anda
                     </h1>
 
                     {/* Subheading */}
                     <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-                        {t("description")}
+                        Dari gemerlap Singapura hingga ibadah Umrah yang khusyuk, kami siap membantu Anda mewujudkan perjalanan yang tak terlupakan.
                     </p>
 
                     {/* CTA Buttons */}
@@ -62,7 +58,7 @@ export function Hero() {
                             asChild
                         >
                             <Link href="#packages">
-                                {tCommon("explorePackages")}
+                                Lihat Paket Wisata
                                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                             </Link>
                         </Button>
@@ -73,7 +69,7 @@ export function Hero() {
                             asChild
                         >
                             <Link href="#contact">
-                                {tCommon("contactUs")}
+                                Hubungi Kami
                             </Link>
                         </Button>
                     </div>
@@ -86,7 +82,7 @@ export function Hero() {
                             </div>
                             <div className="text-left">
                                 <p className="text-2xl font-bold">8+</p>
-                                <p className="text-sm text-white/70">{t("stats.destinations")}</p>
+                                <p className="text-sm text-white/70">Destinasi</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-3 text-white">
@@ -95,7 +91,7 @@ export function Hero() {
                             </div>
                             <div className="text-left">
                                 <p className="text-2xl font-bold">10K+</p>
-                                <p className="text-sm text-white/70">{t("stats.travelers")}</p>
+                                <p className="text-sm text-white/70">Traveler</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-3 text-white">
@@ -104,7 +100,7 @@ export function Hero() {
                             </div>
                             <div className="text-left">
                                 <p className="text-2xl font-bold">15+</p>
-                                <p className="text-sm text-white/70">{t("stats.experience")}</p>
+                                <p className="text-sm text-white/70">Tahun Pengalaman</p>
                             </div>
                         </div>
                     </div>

@@ -18,14 +18,14 @@ export function PackageDetails({
         <div className="space-y-8">
             {/* Description */}
             <div>
-                <h2 className="text-2xl font-bold text-foreground mb-4">About This Trip</h2>
+                <h2 className="text-2xl font-bold text-foreground mb-4">Tentang Paket Ini</h2>
                 <p className="text-muted-foreground leading-relaxed text-lg">{description}</p>
             </div>
 
             {/* Highlights */}
             <Card className="border-0 shadow-md bg-accent/30">
                 <CardHeader>
-                    <CardTitle className="text-xl">Trip Highlights</CardTitle>
+                    <CardTitle className="text-xl">Highlight</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -50,7 +50,7 @@ export function PackageDetails({
                             <div className="p-1.5 rounded-full bg-green-100">
                                 <Check className="h-4 w-4 text-green-600" />
                             </div>
-                            What&apos;s Included
+                            Sudah Termasuk
                         </CardTitle>
                     </CardHeader>
                     <CardContent className="pt-0">
@@ -72,7 +72,7 @@ export function PackageDetails({
                             <div className="p-1.5 rounded-full bg-red-100">
                                 <X className="h-4 w-4 text-red-600" />
                             </div>
-                            What&apos;s Not Included
+                            Tidak Termasuk
                         </CardTitle>
                     </CardHeader>
                     <CardContent className="pt-0">

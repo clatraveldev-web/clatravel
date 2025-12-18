@@ -44,14 +44,14 @@ export async function generateMetadata({ params }: PackagePageProps): Promise<Me
 
     return {
         title: pkg.title,
-        description: `${pkg.description} Starting from ${formattedPrice}. ${pkg.duration}, ${pkg.groupSize}.`,
+        description: `${pkg.description} Mulai dari ${formattedPrice}. ${pkg.duration}, ${pkg.groupSize}.`,
         keywords: [
-            `${pkg.country} travel`,
-            `${pkg.country} tour package`,
+            `paket wisata ${pkg.country}`,
+            `tour ${pkg.country}`,
             pkg.title,
-            "vacation",
-            "holiday",
-            "travel agency Indonesia",
+            "liburan",
+            "travel",
+            "agen perjalanan Indonesia",
             ...pkg.highlights,
         ],
         openGraph: {
@@ -73,7 +73,7 @@ export async function generateMetadata({ params }: PackagePageProps): Promise<Me
         twitter: {
             card: "summary_large_image",
             title: `${pkg.title} - ClaTravel`,
-            description: `${pkg.tagline}. Starting from ${formattedPrice}. Book now!`,
+            description: `${pkg.tagline}. Mulai dari ${formattedPrice}. Pesan sekarang!`,
             images: [pkg.heroImages[0]],
         },
         alternates: {
@@ -142,17 +142,17 @@ export default async function PackagePage({ params }: PackagePageProps) {
                     <div className="flex items-center justify-between mb-10">
                         <div>
                             <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                                Explore Other Destinations
+                                Jelajahi Destinasi Lainnya
                             </h2>
                             <p className="text-muted-foreground mt-2">
-                                Discover more amazing travel experiences
+                                Temukan lebih banyak pengalaman perjalanan menakjubkan
                             </p>
                         </div>
                         <Link
                             href="/#packages"
                             className="hidden md:inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
                         >
-                            View All
+                            Lihat Semua
                             <ArrowRight className="h-5 w-5" />
                         </Link>
                     </div>
@@ -201,7 +201,7 @@ export default async function PackagePage({ params }: PackagePageProps) {
                             href="/#packages"
                             className="inline-flex items-center gap-2 text-primary font-semibold"
                         >
-                            View All Packages
+                            Lihat Semua Paket
                             <ArrowRight className="h-5 w-5" />
                         </Link>
                     </div>

@@ -26,9 +26,9 @@ export function ItinerarySection({ itinerary }: ItinerarySectionProps) {
     return (
         <div className="space-y-6">
             <div>
-                <h2 className="text-2xl font-bold text-foreground mb-2">Day-by-Day Itinerary</h2>
+                <h2 className="text-2xl font-bold text-foreground mb-2">Jadwal Perjalanan</h2>
                 <p className="text-muted-foreground">
-                    Explore what awaits you on each day of this incredible journey.
+                    Intip apa saja yang bakal kamu lakukan setiap harinya.
                 </p>
             </div>
 
@@ -49,10 +49,10 @@ export function ItinerarySection({ itinerary }: ItinerarySectionProps) {
                                 </Badge>
                                 <div>
                                     <h3 className="font-semibold text-foreground">
-                                        Day {day.day}: {day.title}
+                                        Hari {day.day}: {day.title}
                                     </h3>
                                     <p className="text-sm text-muted-foreground mt-0.5">
-                                        {day.activities.length} activities planned
+                                        {day.activities.length} aktivitas direncanakan
                                     </p>
                                 </div>
                             </div>
@@ -63,7 +63,7 @@ export function ItinerarySection({ itinerary }: ItinerarySectionProps) {
 
                                 <div className="space-y-3">
                                     <p className="text-sm font-medium text-foreground">
-                                        Today&apos;s Activities:
+                                        Aktivitas Hari Ini:
                                     </p>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                         {day.activities.map((activity, actIndex) => {

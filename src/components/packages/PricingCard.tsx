@@ -27,7 +27,7 @@ export function PricingCard({ options }: PricingCardProps) {
         <Card className="border-0 shadow-xl sticky top-24 p-0 gap-0 overflow-hidden">
             <CardHeader className="bg-primary text-primary-foreground px-6 py-4">
                 <div className="flex items-center justify-between">
-                    <CardTitle className="text-xl">Book This Package</CardTitle>
+                    <CardTitle className="text-xl">Booking</CardTitle>
                     <Badge className="bg-secondary text-secondary-foreground">
                         <Star className="h-3 w-3 mr-1 fill-current" />
                         4.9
@@ -60,7 +60,7 @@ export function PricingCard({ options }: PricingCardProps) {
                 {/* Selected Option Features */}
                 <div className="space-y-3 pt-4 border-t">
                     <p className="text-sm font-medium text-foreground">
-                        {options[selectedOption].name} Package Includes:
+                        Yang Didapat di Paket {options[selectedOption].name}:
                     </p>
                     <ul className="space-y-2">
                         {options[selectedOption].features.map((feature, index) => (
@@ -75,12 +75,12 @@ export function PricingCard({ options }: PricingCardProps) {
                 {/* Total Price */}
                 <div className="pt-4 border-t">
                     <div className="flex items-center justify-between mb-4">
-                        <span className="text-muted-foreground">Total Price</span>
+                        <span className="text-muted-foreground">Total Harga</span>
                         <div className="text-right">
                             <p className="text-xl font-bold text-primary">
                                 {formatIDR(options[selectedOption].price)}
                             </p>
-                            <p className="text-xs text-muted-foreground">per person</p>
+                            <p className="text-xs text-muted-foreground">per orang</p>
                         </div>
                     </div>
                 </div>
@@ -90,14 +90,14 @@ export function PricingCard({ options }: PricingCardProps) {
                     <Button className="w-full" size="lg" asChild>
                         <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                             <MessageCircle className="h-5 w-5 mr-2" />
-                            Book via WhatsApp
+                            Pesan via WhatsApp
                         </Link>
                     </Button>
                     <div className="grid grid-cols-2 gap-3">
                         <Button variant="outline" size="sm" className="w-full" asChild>
                             <Link href="tel:+622122045054">
                                 <Phone className="h-4 w-4 mr-2" />
-                                Call
+                                Telepon
                             </Link>
                         </Button>
                         <Button variant="outline" size="sm" className="w-full" asChild>
@@ -113,11 +113,11 @@ export function PricingCard({ options }: PricingCardProps) {
                 <div className="pt-4 border-t">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                         <Check className="h-4 w-4 text-green-500" />
-                        <span>Free cancellation up to 7 days before</span>
+                        <span>Gratis batal sampai H-7</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground mt-2">
                         <Check className="h-4 w-4 text-green-500" />
-                        <span>Best price guarantee</span>
+                        <span>Harga terbaik dijamin</span>
                     </div>
                 </div>
             </CardContent>

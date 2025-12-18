@@ -2,41 +2,34 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 import { Mail, Phone, MapPin, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
 const destinations = [
-    { href: "/packages/singapore", label: "Singapore" },
+    { href: "/packages/singapore", label: "Singapura" },
     { href: "/packages/thailand", label: "Thailand" },
     { href: "/packages/malaysia", label: "Malaysia" },
-    { href: "/packages/korea", label: "South Korea" },
-    { href: "/packages/japan", label: "Japan" },
+    { href: "/packages/korea", label: "Korea Selatan" },
+    { href: "/packages/japan", label: "Jepang" },
     { href: "/packages/australia", label: "Australia" },
-    { href: "/packages/schengen", label: "Europe" },
+    { href: "/packages/schengen", label: "Eropa" },
     { href: "/packages/umrah", label: "Umrah" },
 ];
 
+const quickLinks = [
+    { href: "/", label: "Beranda" },
+    { href: "/#destinations", label: "Destinasi" },
+    { href: "/#packages", label: "Paket" },
+    { href: "/#about", label: "Tentang" },
+    { href: "/#contact", label: "Kontak" },
+];
+
 const socialLinks = [
-    { href: "#", icon: Facebook, label: "Facebook" },
-    { href: "#", icon: Instagram, label: "Instagram" },
-    { href: "#", icon: Twitter, label: "Twitter" },
-    { href: "#", icon: Youtube, label: "Youtube" },
+    { href: "https://www.instagram.com/clatourtravel/?hl=id", icon: Instagram, label: "Instagram" },
 ];
 
 export function Footer() {
-    const t = useTranslations("footer");
-    const tNav = useTranslations("nav");
-
-    const quickLinks = [
-        { href: "/", label: tNav("home") },
-        { href: "/#destinations", label: tNav("destinations") },
-        { href: "/#packages", label: tNav("packages") },
-        { href: "/#about", label: tNav("about") },
-        { href: "/#contact", label: tNav("contact") },
-    ];
-
     return (
         <footer id="contact" className="bg-foreground text-background">
             {/* Newsletter Section */}
@@ -45,20 +38,20 @@ export function Footer() {
                     <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                         <div className="text-center md:text-left">
                             <h3 className="text-2xl font-bold text-primary-foreground mb-2">
-                                {t("newsletterTitle")}
+                                Dapatkan Info & Promo Terbaru
                             </h3>
                             <p className="text-primary-foreground/80">
-                                {t("newsletterDescription")}
+                                Jangan lewatkan penawaran spesial dan tips perjalanan menarik dari kami
                             </p>
                         </div>
                         <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto items-stretch">
                             <input
                                 type="email"
-                                placeholder={t("emailPlaceholder")}
+                                placeholder="Masukkan email Anda"
                                 className="h-12 px-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 min-w-[280px]"
                             />
                             <Button className="h-12 bg-secondary text-secondary-foreground hover:bg-secondary/90 px-6">
-                                {t("subscribe")}
+                                Berlangganan
                             </Button>
                         </div>
                     </div>
@@ -81,7 +74,7 @@ export function Footer() {
                                 />
                             </Link>
                             <p className="text-muted-foreground text-sm leading-relaxed">
-                                {t("tagline")}
+                                Partner perjalanan terpercaya Anda. Kami bantu wujudkan liburan impian ke berbagai destinasi menarik di seluruh dunia.
                             </p>
                             <div className="flex gap-3">
                                 {socialLinks.map((social) => (
@@ -99,7 +92,7 @@ export function Footer() {
 
                         {/* Destinations */}
                         <div>
-                            <h4 className="font-semibold text-lg mb-6">{tNav("destinations")}</h4>
+                            <h4 className="font-semibold text-lg mb-6">Destinasi</h4>
                             <ul className="space-y-3">
                                 {destinations.map((dest) => (
                                     <li key={dest.href}>
@@ -116,7 +109,7 @@ export function Footer() {
 
                         {/* Quick Links */}
                         <div>
-                            <h4 className="font-semibold text-lg mb-6">{tNav("home")}</h4>
+                            <h4 className="font-semibold text-lg mb-6">Menu</h4>
                             <ul className="space-y-3">
                                 {quickLinks.map((link) => (
                                     <li key={link.href}>
@@ -133,7 +126,7 @@ export function Footer() {
 
                         {/* Contact Info */}
                         <div>
-                            <h4 className="font-semibold text-lg mb-6">{t("contactUs")}</h4>
+                            <h4 className="font-semibold text-lg mb-6">Hubungi Kami</h4>
                             <ul className="space-y-4">
                                 <li className="flex items-start gap-3">
                                     <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
@@ -180,13 +173,13 @@ export function Footer() {
             <div className="py-6">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-                        <p>{t("copyright")}</p>
+                        <p>© 2024 ClaTravel. Semua hak dilindungi.</p>
                         <div className="flex gap-6">
                             <Link href="#" className="hover:text-primary transition-colors">
-                                {t("privacyPolicy")}
+                                Kebijakan Privasi
                             </Link>
                             <Link href="#" className="hover:text-primary transition-colors">
-                                {t("termsConditions")}
+                                Syarat & Ketentuan
                             </Link>
                         </div>
                     </div>

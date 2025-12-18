@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 import { Card, CardContent } from "@/components/ui/card";
 import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
 
@@ -13,7 +12,7 @@ const testimonials = [
         location: "Jakarta, Indonesia",
         avatar: "https://ui-avatars.com/api/?name=Dewi+Anggraini&background=1a5d4a&color=fff&size=100",
         rating: 5,
-        destination: "Japan",
+        destination: "Jepang",
         text: "Tour Jepang 10 hari bersama ClaTravel benar-benar magical! Dari menginap di ryokan hingga upacara minum teh, semuanya diatur dengan sempurna. Setiap detail dipikirkan dengan baik. Sangat recommended!",
     },
     {
@@ -40,7 +39,7 @@ const testimonials = [
         location: "Yogyakarta, Indonesia",
         avatar: "https://ui-avatars.com/api/?name=Budi+Santoso&background=1a5d4a&color=fff&size=100",
         rating: 5,
-        destination: "South Korea",
+        destination: "Korea Selatan",
         text: "Sebagai K-pop fan, trip Korea ini impian jadi kenyataan! Tim ClaTravel bahkan dapat tiket konser K-pop. Pengalaman hanbok dan tour istana tidak terlupakan. Absolutely perfect!",
     },
     {
@@ -49,14 +48,13 @@ const testimonials = [
         location: "Semarang, Indonesia",
         avatar: "https://ui-avatars.com/api/?name=Ratna+Kusuma&background=1a5d4a&color=fff&size=100",
         rating: 5,
-        destination: "Europe",
+        destination: "Eropa",
         text: "Tour Schengen multi-negara adalah trip of a lifetime! 14 hari, 6 negara, kenangan tak terhitung. Pengalaman Eurail dan skip-the-line bikin semuanya lancar dan menyenangkan.",
     },
 ];
 
 export function Testimonials() {
     const [activeIndex, setActiveIndex] = useState(0);
-    const t = useTranslations("testimonials");
 
     const nextSlide = () => {
         setActiveIndex((prev) => (prev + 1) % testimonials.length);
@@ -76,13 +74,13 @@ export function Testimonials() {
                 {/* Section Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <span className="inline-block text-sm font-semibold text-primary uppercase tracking-wider mb-4">
-                        {t("badge")}
+                        Testimoni
                     </span>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                        {t("title")} <span className="text-primary">{t("titleHighlight")}</span> {t("titleEnd")}
+                        Kata <span className="text-primary">Mereka</span>
                     </h2>
                     <p className="text-muted-foreground text-lg">
-                        {t("description")}
+                        Cerita langsung dari pelanggan yang sudah merasakan serunya liburan bersama kami.
                     </p>
                 </div>
 
@@ -129,7 +127,7 @@ export function Testimonials() {
                                                     {testimonials[activeIndex].name}
                                                 </p>
                                                 <p className="text-sm text-muted-foreground">
-                                                    {testimonials[activeIndex].location} • {testimonials[activeIndex].destination} Trip
+                                                    {testimonials[activeIndex].location} • Trip {testimonials[activeIndex].destination}
                                                 </p>
                                             </div>
                                         </div>
@@ -143,7 +141,7 @@ export function Testimonials() {
                             <button
                                 onClick={prevSlide}
                                 className="p-3 rounded-full bg-accent hover:bg-primary hover:text-primary-foreground transition-colors"
-                                aria-label="Previous testimonial"
+                                aria-label="Testimoni sebelumnya"
                             >
                                 <ChevronLeft className="h-5 w-5" />
                             </button>
@@ -158,7 +156,7 @@ export function Testimonials() {
                                             ? "w-8 bg-primary"
                                             : "bg-border hover:bg-muted-foreground"
                                             }`}
-                                        aria-label={`Go to testimonial ${index + 1}`}
+                                        aria-label={`Ke testimoni ${index + 1}`}
                                     />
                                 ))}
                             </div>
@@ -166,7 +164,7 @@ export function Testimonials() {
                             <button
                                 onClick={nextSlide}
                                 className="p-3 rounded-full bg-accent hover:bg-primary hover:text-primary-foreground transition-colors"
-                                aria-label="Next testimonial"
+                                aria-label="Testimoni selanjutnya"
                             >
                                 <ChevronRight className="h-5 w-5" />
                             </button>
@@ -179,19 +177,19 @@ export function Testimonials() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-60">
                         <div className="text-center">
                             <p className="text-4xl font-bold text-foreground">10K+</p>
-                            <p className="text-sm text-muted-foreground">{t("stats.travelers")}</p>
+                            <p className="text-sm text-muted-foreground">Traveler Bahagia</p>
                         </div>
                         <div className="text-center">
                             <p className="text-4xl font-bold text-foreground">15+</p>
-                            <p className="text-sm text-muted-foreground">{t("stats.years")}</p>
+                            <p className="text-sm text-muted-foreground">Tahun Pengalaman</p>
                         </div>
                         <div className="text-center">
                             <p className="text-4xl font-bold text-foreground">4.9</p>
-                            <p className="text-sm text-muted-foreground">{t("stats.rating")}</p>
+                            <p className="text-sm text-muted-foreground">Rating Rata-rata</p>
                         </div>
                         <div className="text-center">
                             <p className="text-4xl font-bold text-foreground">24/7</p>
-                            <p className="text-sm text-muted-foreground">{t("stats.support")}</p>
+                            <p className="text-sm text-muted-foreground">Dukungan Pelanggan</p>
                         </div>
                     </div>
                 </div>

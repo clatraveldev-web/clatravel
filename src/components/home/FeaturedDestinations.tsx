@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
 import { packages } from "@/lib/data/packages";
 import { formatIDR } from "@/lib/utils";
@@ -10,23 +9,20 @@ import { formatIDR } from "@/lib/utils";
 const featuredDestinations = packages.slice(0, 6);
 
 export function FeaturedDestinations() {
-    const t = useTranslations("featured");
-    const tCommon = useTranslations("common");
-
     return (
         <section id="destinations" className="py-20 md:py-28 bg-background">
             <div className="container mx-auto px-4">
                 {/* Section Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <span className="inline-block text-sm font-semibold text-primary uppercase tracking-wider mb-4">
-                        {t("badge")}
+                        Destinasi Favorit
                     </span>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                        {t("title")}{" "}
-                        <span className="text-primary">{t("titleHighlight")}</span>
+                        Pilihan{" "}
+                        <span className="text-primary">Terbaik</span>
                     </h2>
                     <p className="text-muted-foreground text-lg">
-                        {t("description")}
+                        Destinasi paling diminati yang siap memberikan pengalaman liburan tak terlupakan.
                     </p>
                 </div>
 
@@ -66,7 +62,7 @@ export function FeaturedDestinations() {
                                         </p>
                                         <div className="flex items-center justify-between pt-2">
                                             <div>
-                                                <span className="text-white/60 text-sm">{tCommon("startingFrom")}</span>
+                                                <span className="text-white/60 text-sm">Mulai dari</span>
                                                 <p className="text-white font-bold text-lg">
                                                     {formatIDR(destination.startingPrice)}
                                                 </p>
@@ -88,7 +84,7 @@ export function FeaturedDestinations() {
                         href="#packages"
                         className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
                     >
-                        {tCommon("viewAllDestinations")}
+                        Lihat Semua Destinasi
                         <ArrowRight className="h-5 w-5" />
                     </Link>
                 </div>

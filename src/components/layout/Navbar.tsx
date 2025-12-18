@@ -3,24 +3,20 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { WHATSAPP_LINK } from "@/lib/utils";
 
 export function Navbar() {
-    const t = useTranslations("nav");
-    const tCommon = useTranslations("common");
-
     const [isScrolled, setIsScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
     const navLinks = [
-        { href: "/", label: t("home") },
-        { href: "/#destinations", label: t("destinations") },
-        { href: "/#packages", label: t("packages") },
-        { href: "/#about", label: t("about") },
-        { href: "/#contact", label: t("contact") },
+        { href: "/", label: "Beranda" },
+        { href: "/#destinations", label: "Destinasi" },
+        { href: "/#packages", label: "Paket" },
+        { href: "/#about", label: "Tentang" },
+        { href: "/#contact", label: "Kontak" },
     ];
 
     useEffect(() => {
@@ -93,7 +89,7 @@ export function Navbar() {
                                 asChild
                             >
                                 <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                                    {tCommon("bookNow")}
+                                    Pesan Sekarang
                                 </Link>
                             </Button>
                         </div>
@@ -140,7 +136,7 @@ export function Navbar() {
                             rel="noopener noreferrer"
                             onClick={() => setIsOpen(false)}
                         >
-                            {tCommon("bookNow")}
+                            Pesan Sekarang
                         </Link>
                     </Button>
 
@@ -160,3 +156,4 @@ export function Navbar() {
         </>
     );
 }
+
